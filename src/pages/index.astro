@@ -1,5 +1,7 @@
 ---
-
+import '@fontsource/oswald/500.css'
+import '@fontsource/open-sans/500.css'
+import '@fontsource/open-sans/700.css'
 ---
 
 <html lang="en">
@@ -10,6 +12,43 @@
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <header
+      class="sticky top-0 border-b border-black/20 bg-primary py-3 shadow-md"
+    >
+      <div class="container flex items-center justify-between">
+        <h1 class="font-display text-2xl text-secondary">Helston Flora Day</h1>
+        <nav>
+          <ul class="flex items-center text-sm font-bold text-white opacity-70">
+            <li><a href="/" class="p-3">Dates</a></li>
+            <li><a href="/" class="p-3">The Dances</a></li>
+            <li><a href="/" class="p-3">On The Day</a></li>
+            <li><a href="/" class="p-3">Official Guide</a></li>
+            <li><a href="/" class="p-3">Gallery</a></li>
+            <li><a href="/" class="p-3">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="bg-primary py-14">
+        <div class="container">
+          <div
+            class="font-display pr-16 text-right text-7xl uppercase leading-tight tracking-wider text-secondary"
+          >
+            Helston<br />Flora Day
+          </div>
+        </div>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        faucibus lacus est. Pellentesque ac enim nisl. Proin eget neque
+        convallis, egestas risus eu, bibendum magna. Morbi ultricies, ex vitae
+        facilisis posuere, eros odio fringilla mauris, sit amet lacinia purus
+        elit consequat orci. Nunc consequat quam purus, id convallis urna
+        condimentum at. Fusce id mollis tortor. Nullam semper magna vel sapien
+        faucibus auctor. Etiam eget dui vitae metus interdum tempus ut a velit.
+        Nulla efficitur magna a metus fermentum posuere.
+      </div>
+    </main>
   </body>
 </html>

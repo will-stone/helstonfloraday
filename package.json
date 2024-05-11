@@ -13,6 +13,8 @@
   "dependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/open-sans": "^5.0.28",
+    "@fontsource/oswald": "^5.0.20",
     "astro": "^4.8.2",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
