@@ -1,0 +1,18 @@
+{
+  "proseWrap": "always",
+  "semi": false,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-packagejson"
+  ]
+}
