@@ -3,7 +3,6 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
-      sm: '640px',
       md: '768px',
       lg: '1024px',
     },
@@ -15,6 +14,8 @@ export default {
       colors: {
         primary: '#2E7C71',
         secondary: '#FFE9A8',
+        tertiary: '#235d55',
+        quaternary: '#2A515C',
       },
       fontFamily: {
         display: 'Oswald, Helvetica, Arial, sans-serif',
