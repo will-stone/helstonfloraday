@@ -3,6 +3,9 @@ import '@fontsource/oswald/500.css'
 import '@fontsource/open-sans/500.css'
 import '@fontsource/open-sans/700.css'
 import Header from '../components/header.astro'
+import { Image } from 'astro:assets'
+import dance2 from '../images/website/dance2.jpg'
+import hal2 from '../images/website/hal2.jpg'
 ---
 
 <html lang="en">
@@ -12,28 +15,80 @@ import Header from '../components/header.astro'
     <meta name="viewport" content="width=device-width" />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="text-lg font-medium text-neutral-700">
     <Header />
-    <main>
-      <div class="bg-primary py-14">
-        <div class="container">
+    <main class="bg-[url('/bg.png')]">
+      <div class="relative sm:py-14">
+        <div class="absolute inset-0 flex">
+          <div class="w-2/3 bg-primary"></div>
+          <div class="bg-tertiary w-1/3"></div>
+        </div>
+        <div class="relative md:container lg:flex">
+          <div class="h-80 lg:h-auto lg:w-96">
+            <Image src={dance2} alt="TODO" class="h-full object-cover" />
+          </div>
           <div
-            class="pr-16 text-right font-display text-7xl uppercase leading-tight tracking-wider text-secondary"
+            class="ml-auto px-16 pb-20 pt-16 text-right font-display text-5xl uppercase leading-tight tracking-wider text-secondary md:text-7xl lg:pb-64 lg:pt-24"
           >
             Helston<br />Flora Day
           </div>
         </div>
       </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        faucibus lacus est. Pellentesque ac enim nisl. Proin eget neque
-        convallis, egestas risus eu, bibendum magna. Morbi ultricies, ex vitae
-        facilisis posuere, eros odio fringilla mauris, sit amet lacinia purus
-        elit consequat orci. Nunc consequat quam purus, id convallis urna
-        condimentum at. Fusce id mollis tortor. Nullam semper magna vel sapien
-        faucibus auctor. Etiam eget dui vitae metus interdum tempus ut a velit.
-        Nulla efficitur magna a metus fermentum posuere.
+
+      <div class="container py-12">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div>
+            <p class="font-display text-3xl uppercase leading-normal">
+              Helston, the Cornish market town, where for hundreds of years, the
+              townsfolk have celebrated and enjoyed the wonderful tradition that
+              is Flora Day.
+            </p>
+          </div>
+
+          <Image
+            src={hal2}
+            alt="TODO"
+            class="lg:relative lg:z-10 lg:-mt-40 lg:bg-white lg:p-8"
+          />
+
+          <p class="leading-relaxed">
+            This ancient festival is usually held on 8th May. A spring festival
+            to celebrate the end of winter and mark the arrival of the new
+            vitality and fertility with the trees and flowers bursting into
+            life. The houses and shops of the town are decorated with greenery
+            and floral arrangements to express the spirit of renewal.
+          </p>
+
+          <p class="leading-relaxed">
+            When the big bass drum strikes the first beat of the dance at seven
+            in the morning, the spirit of the day is stirred and the
+            celebrations commence. Couples dance through the streets, entering
+            selected houses and shops to drive out the darkness of winter and
+            bring in the light of spring.
+          </p>
+
+          <div>
+            <a
+              href="/"
+              class="rounded-2xl bg-primary px-6 py-4 text-secondary shadow-lg"
+              >Purchase the Official Guidebook</a
+            >
+          </div>
+
+          <p class="leading-relaxed">
+            The colourful pageant, known as Hal an Tow, tells the history of
+            Helston with the participating characters singing about the
+            challenge of the Spanish Armada, the English patron saint, St.
+            George and the fight between St. Michael and the devil.
+          </p>
+        </div>
       </div>
     </main>
+
+    <footer class="bg-primary py-8">
+      <div class="container text-center font-bold text-white">
+        Copyright Helston Flora Day Association
+      </div>
+    </footer>
   </body>
 </html>
