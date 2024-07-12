@@ -1,0 +1,29 @@
+---
+import '@fontsource/oswald/500.css'
+import '@fontsource/open-sans/500.css'
+import '@fontsource/open-sans/700.css'
+import Header from '../components/header.astro'
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body class="text-lg font-medium text-neutral-700">
+    <Header />
+    <main class="bg-[url('/bg.png')]">
+      <slot />
+    </main>
+
+    <footer class="bg-primary py-8">
+      <div class="container text-center font-bold text-white">
+        Copyright Helston Flora Day Association
+      </div>
+    </footer>
+  </body>
+</html>
