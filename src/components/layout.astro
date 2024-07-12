@@ -4,7 +4,11 @@ import '@fontsource/open-sans/500.css'
 import '@fontsource/open-sans/700.css'
 import Header from '../components/header.astro'
 
-const { title } = Astro.props
+const { title: pageTitle } = Astro.props
+
+const title = pageTitle
+  ? pageTitle + ' | Helston Flora Day'
+  : 'Helston Flora Day | The Official Site'
 ---
 
 <html lang="en">
@@ -17,7 +21,17 @@ const { title } = Astro.props
   <body class="text-lg font-medium text-neutral-700">
     <Header />
     <main class="bg-[url('/bg.png')]">
-      <slot />
+      <slot name="title">
+        <div
+          class="border-b border-neutral-800 bg-primary py-14 text-center font-display text-6xl text-secondary"
+        >
+          {pageTitle}
+        </div>
+      </slot>
+
+      <div class="container py-12">
+        <slot />
+      </div>
     </main>
 
     <footer class="bg-primary py-8">
