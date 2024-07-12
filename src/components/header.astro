@@ -11,7 +11,7 @@
       >
       <ul
         data-menu
-        class="absolute right-0 hidden w-60 bg-quaternary font-bold text-white md:relative md:flex md:w-auto md:items-center md:bg-transparent md:text-sm md:opacity-70"
+        class="absolute right-0 hidden w-60 bg-quaternary font-bold text-white md:relative md:flex md:w-auto md:items-center md:bg-transparent md:text-sm"
       >
         {
           [
@@ -23,7 +23,15 @@
             { href: '/', title: 'Contact' },
           ].map(({ href, title }) => (
             <li>
-              <a href={href} class="block p-3">
+              <a
+                href={href}
+                class="block p-3"
+                class:list={
+                  Astro.url.pathname === href
+                    ? 'text-secondary'
+                    : 'md:opacity-70'
+                }
+              >
                 {title}
               </a>
             </li>
