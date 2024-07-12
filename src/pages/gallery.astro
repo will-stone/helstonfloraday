@@ -16,18 +16,16 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <Layout title="Gallery">
-  <div
-    class="xl:grid-cols-5 sm:grid-cols-2 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4"
-  >
+  <div class="sm:columns-2 md:columns-3 lg:columns-4">
     {
       Object.values(images).map((image) => (
-        <div class="h-56">
-          <Image
-            alt=""
-            src={image()}
-            class="h-full w-full rounded object-cover shadow"
-          />
-        </div>
+        <Image
+          alt=""
+          quality={50}
+          src={image()}
+          class="mb-4 w-full rounded border border-transparent transition-all duration-300 ease-in-out hover:scale-105 hover:cursor-pointer hover:border-primary hover:shadow-lg"
+          loading="lazy"
+        />
       ))
     }
   </div>
