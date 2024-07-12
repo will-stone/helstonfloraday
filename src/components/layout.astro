@@ -17,9 +17,9 @@ const title = pageTitle
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
   </head>
-  <body class="text-lg font-medium text-neutral-700">
+  <body class="bg-primary text-lg font-medium text-neutral-700">
     <Header />
-    <main class="bg-[url('/bg.png')]">
+    <main class="bg-white bg-[url('/bg.png')]">
       <slot name="title">
         <div
           class="border-b border-neutral-800 bg-primary py-14 text-center font-display text-6xl text-secondary"
@@ -33,7 +33,7 @@ const title = pageTitle
       </div>
     </main>
 
-    <footer class="bg-primary py-8">
+    <footer class="border-t border-neutral-800 bg-primary py-8">
       <div class="container text-center font-bold text-white">
         Copyright Helston Flora Day Association
       </div>
