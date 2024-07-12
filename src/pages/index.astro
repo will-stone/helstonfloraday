@@ -18,16 +18,17 @@ import hal2 from '../images/website/hal2.jpg'
   <body class="text-lg font-medium text-neutral-700">
     <Header />
     <main class="bg-[url('/bg.png')]">
-      <div class="relative sm:py-14">
+      <div class="sm:py-14 relative">
         <div class="absolute inset-0 flex">
           <div class="w-2/3 bg-primary"></div>
-          <div class="bg-tertiary w-1/3"></div>
+          <div class="w-1/3 bg-tertiary"></div>
         </div>
         <div class="relative md:container lg:flex">
           <div class="h-80 lg:h-auto lg:w-96">
             <Image src={dance2} alt="TODO" class="h-full object-cover" />
           </div>
           <div
+            data-css-title
             class="ml-auto px-16 pb-20 pt-16 text-right font-display text-5xl uppercase leading-tight tracking-wider text-secondary md:text-7xl lg:pb-64 lg:pt-24"
           >
             Helston<br />Flora Day
@@ -92,3 +93,21 @@ import hal2 from '../images/website/hal2.jpg'
     </footer>
   </body>
 </html>
+
+<style>
+  @keyframes slideAndFadeInFromLeft {
+    0% {
+      transform: translateX(-2rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  [data-css-title] {
+    opacity: 0;
+    animation: 1s linear 300ms 1 slideAndFadeInFromLeft forwards;
+  }
+</style>
