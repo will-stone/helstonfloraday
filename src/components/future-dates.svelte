@@ -5,7 +5,7 @@
     const eighthThisYear = new Date(nowYear, 4, 8)
     const isAfterFloraDay = now > eighthThisYear
 
-    return Array.from({ length: 7 }).map((_, index) => {
+    return Array.from({ length: 8 }).map((_, index) => {
       const year = nowYear + (isAfterFloraDay ? index + 1 : index)
       const eighth = new Date(year, 4, 8)
       const eighthDay = eighth.getDay()
