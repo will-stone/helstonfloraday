@@ -1,14 +1,40 @@
 ---
+import { Image } from 'astro:assets'
 import Layout from '../components/layout.astro'
+import guide from '../images/guides/guide-2024.png'
 ---
 
 <Layout title="Official Guide">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus
-  lacus est. Pellentesque ac enim nisl. Proin eget neque convallis, egestas
-  risus eu, bibendum magna. Morbi ultricies, ex vitae facilisis posuere, eros
-  odio fringilla mauris, sit amet lacinia purus elit consequat orci. Nunc
-  consequat quam purus, id convallis urna condimentum at. Fusce id mollis
-  tortor. Nullam semper magna vel sapien faucibus auctor. Etiam eget dui vitae
-  metus interdum tempus ut a velit. Nulla efficitur magna a metus fermentum
-  posuere.
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="space-y-4">
+      <p class="text-justify leading-relaxed">
+        The official guide to Flora Day is now available containing all you need
+        to know about this very special event. Contents include:
+      </p>
+      <ul>
+        <li>Information about the Ancient Borough of Helston</li>
+        <li>The Furry Dance — its origins and traditions</li>
+        <li>The order of proceedings and routes of the dances</li>
+        <li>The Hal-an-Tow</li>
+      </ul>
+      <p class="text-justify leading-relaxed">
+        Copies are available by sending a cheque or postal order for £7.50 to
+        the Secretary — please make cheques payable to "Helston Flora Day
+        Association"
+      </p>
+      <p class="text-justify leading-relaxed">
+        Hon Secretary, Mr N. B. Wills,<br />
+        117 Meneage St,<br />
+        Helston,<br />
+        TR13 8RL
+      </p>
+      <p class="text-justify leading-relaxed">
+        The stewards make no charge to the public for any aspect of Flora Day.
+        All money raised on Flora Day is used to cover costs incurred in
+        organising the day.
+      </p>
+    </div>
+
+    <Image alt="" src={guide} />
+  </div>
 </Layout>
