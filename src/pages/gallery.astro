@@ -18,14 +18,46 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 <Layout title="Gallery">
   <div class="sm:columns-2 md:columns-3 lg:columns-4">
     {
-      Object.values(images).map((image) => (
-        <Image
-          alt=""
-          quality={50}
-          src={image()}
-          class="mb-4 w-full rounded border border-transparent transition-all duration-300 ease-in-out hover:scale-105 hover:cursor-pointer hover:border-primary hover:shadow-lg"
-          loading="lazy"
-        />
+      Object.values(images).map((image, index) => (
+        <div>
+          <a
+            href={'#' + index}
+            id={'i' + index}
+            class="pointer-events-none scroll-mt-20 sm:pointer-events-auto"
+          >
+            <Image
+              alt=""
+              src={image()}
+              class="mb-4 w-full rounded border border-transparent transition-all duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg"
+              loading="lazy"
+            />
+          </a>
+          <div
+            id={String(index)}
+            class="fixed inset-0 z-50 hidden items-center bg-black/80 p-4 target:flex target:flex-col sm:p-6"
+          >
+            <Image
+              alt=""
+              src={image()}
+              class="h-full w-full object-contain object-center"
+              loading="lazy"
+            />
+            <a
+              href={'#i' + index}
+              class="absolute right-4 top-4 text-xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+            >
+              Close
+            </a>
+            <div class="absolute top-1/2 flex w-full justify-between text-6xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              <a href={'#' + (index - 1)} class="px-4 py-8">
+                &lsaquo;
+              </a>
+              <a href={'#' + (index + 1)} class="px-4 py-8">
+                &rsaquo;
+              </a>
+            </div>
+          </div>
+        </div>
       ))
     }
   </div>
