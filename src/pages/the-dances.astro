@@ -1,14 +1,71 @@
 ---
+import { Image } from 'astro:assets'
 import Layout from '../components/layout.astro'
+import earlyImg from '../images/gallery/photo_2021-03-17-13.03.02.jpeg'
+import halImg from '../images/gallery/650x124.jpg'
+import childrensImg from '../images/gallery/childrens2.jpg'
+import middayImg from '../images/gallery/photo_2021-03-17-13.03.39.jpeg'
+import eveningImg from '../images/gallery/photo_2021-03-17-13.04.51.jpeg'
+import mapImg from '../images/website/FLORA-MAP-new-arrows-New.png'
 ---
 
 <Layout title="The Dances">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus
-  lacus est. Pellentesque ac enim nisl. Proin eget neque convallis, egestas
-  risus eu, bibendum magna. Morbi ultricies, ex vitae facilisis posuere, eros
-  odio fringilla mauris, sit amet lacinia purus elit consequat orci. Nunc
-  consequat quam purus, id convallis urna condimentum at. Fusce id mollis
-  tortor. Nullam semper magna vel sapien faucibus auctor. Etiam eget dui vitae
-  metus interdum tempus ut a velit. Nulla efficitur magna a metus fermentum
-  posuere.
+  <div class="space-y-8">
+    {
+      [
+        {
+          time: '7:00 am',
+          title: 'Early Morning Dance',
+          description:
+            "The First Dance commences from the Guildhall and proceeds up Meneage Street dancing in and out of a number of premises before coming back down and turning right into Wendron Street and Godolphin Road. Turning back at Godolphin House, it proceeds into Penrose Road, Church Street and Cross Street. It moves down Penhellaz Hill into St. John's Road, Castle Green, Monument Road and Coinagehall Street, ending at the Godolphin Club.",
+          img: earlyImg,
+        },
+        {
+          time: '8:30 am',
+          title: 'Hal-an-Tow',
+          description:
+            "Starting at St. John's Bridge, the Hal an Tow performers tell of the history of Helston at the following locations: The Monument, near the cross in Cross Street, at the top of Wendron Street, at the lower end of Horse and Jockey Lane, at the junction of Trengrouse Way and Meneage Street and finally at the Guildhall. The words of the Hal an Tow song are printed in our official booklet.",
+          img: halImg,
+        },
+        {
+          time: '9:50 am',
+          title: "Childrens' Dance",
+          description:
+            "Over 1200 Children from Helston's four schools, all dressed in white with headdresses and ties representing each of the schools, will commence from Wendron Street and process up and then down Meneage Street turning into Church Street and Cross Street. Dancing around the gardens of Penhellis before progressing down Tanyard Lane to Lady Street. Dancing down the pavement of Coinagehall Street, the dance circles the Bowling Green before ending by dancing up the centre of Coinagehall Street.",
+          img: childrensImg,
+        },
+        {
+          time: '12 noon',
+          title: 'Midday Dance',
+          description:
+            'As the Town Clock strikes twelve the Helston born leading set of the Midday Dance leave the Guildhall. The Helston Town Band leads the procession up Meneage Street, dancing in and out of some of the properties before returning on the other side of the street. Turning down into Church Street the dance proceeds to Cross Street and into the Gardens at Lismore where a well earned break is taken. Penhellis, the Old Vicarage Gardens and Leslie House Gardens are on the route to Lady Street. They follow the pavement down Coinagehall Street , dancing around the Bowling Green to emerge under the Monument Arch and the final steps up Coinagehall Street before returning to the Guildhall.',
+          img: middayImg,
+        },
+        {
+          time: '5:00 pm',
+          title: 'Evening Dance',
+          description:
+            'The same dancers who took part in the Early Morning Dance return to the final dance of the day which follows a route similar to the Midday Dance.',
+          img: eveningImg,
+        },
+      ].map(({ time, title, description, img }) => (
+        <div>
+          <h2 class="font-display text-3xl">
+            {time} <span class="text-primary">—</span> {title}
+          </h2>
+          <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <p class="text-justify leading-relaxed">{description}</p>
+            <Image src={img} alt="" class="rounded" />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <Image alt="" src={mapImg} class="mt-16" />
+
+  <div class="mt-4 px-8 md:flex md:justify-between">
+    <div class="text-blue-600">➢➢➢ Early Morning Dance</div>
+    <div class="text-red-600">➢➢➢ All other dances</div>
+  </div>
 </Layout>
