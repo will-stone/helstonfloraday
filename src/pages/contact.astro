@@ -1,14 +1,84 @@
 ---
+import { Image } from 'astro:assets'
 import Layout from '../components/layout.astro'
+import middayDanceImg from '../images/gallery/photo_2021-03-17-13.07.32.jpeg'
+import morningEveningDanceImg from '../images/gallery/photo_2021-03-17-13.07.52.jpeg'
+import stallsImg from '../images/website/stalls.jpg'
+import ExternalLink from '../components/external-link.astro'
 ---
 
 <Layout title="Contact">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus
-  lacus est. Pellentesque ac enim nisl. Proin eget neque convallis, egestas
-  risus eu, bibendum magna. Morbi ultricies, ex vitae facilisis posuere, eros
-  odio fringilla mauris, sit amet lacinia purus elit consequat orci. Nunc
-  consequat quam purus, id convallis urna condimentum at. Fusce id mollis
-  tortor. Nullam semper magna vel sapien faucibus auctor. Etiam eget dui vitae
-  metus interdum tempus ut a velit. Nulla efficitur magna a metus fermentum
-  posuere.
+  <h2 class="font-display text-3xl">Apply To Dance</h2>
+  <h3 class="mt-4 font-display text-2xl">Midday Dance</h3>
+  <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="space-y-4">
+      <p class="text-justify leading-relaxed">
+        Applications to take part in the Midday Dance must be submitted to the
+        Secretary during the January prior to the Flora Day. Invitations will be
+        posted in early March.
+      </p>
+      <p>
+        Taking part in the Midday Dance is always a very popular occasion. Due
+        to its popularity, the numbers invited to dance are restricted. If you
+        would like to be considered for an invitation to take part in the Midday
+        Dance on Flora Day, please apply in writing before the end of January
+        to:
+      </p>
+      <p>
+        Hon Secretary, Mr N. B. Wills,<br />
+        117 Meneage St,<br />
+        Helston,<br />
+        TR13 8RL
+      </p>
+      <p class="text-justify leading-relaxed">
+        Please provide full name, address, date of birth and address at the time
+        of birth for all applicants. Please include as much relevant information
+        as possible, email applications cannot be accepted.
+      </p>
+    </div>
+    <Image src={middayDanceImg} alt="" class="rounded" />
+  </div>
+
+  <h3 class="mt-4 font-display text-2xl">Early Morning and Evening Dances</h3>
+  <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="space-y-4">
+      <p class="text-justify leading-relaxed">
+        All those wishing to take part in the Early Morning and Evening Dances
+        should apply in writing before the end of February to:
+      </p>
+      <p>
+        The Secretary, Mrs Kate Williams<br />
+        Naegil,<br />
+        Troubridge Road,<br />
+        Helston,<br />
+        TR13 8DQ
+      </p>
+      <p class="text-justify leading-relaxed">
+        Please provide full name, address, date of birth and address at time of
+        birth for all applicants. Fours may be requested but cannot be
+        guaranteed, and email applications cannot be accepted.
+      </p>
+    </div>
+    <Image src={morningEveningDanceImg} alt="" class="rounded" />
+  </div>
+
+  <h2 class="mt-16 font-display text-3xl">Street Trading & Market Stalls</h2>
+  <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="space-y-4">
+      <p class="text-justify leading-relaxed">
+        For information about street trading and market stalls, please contact:
+      </p>
+      <p>
+        Town Clerk<br />
+        The Guildhall,<br />
+        Helston,<br />
+        TR13 8ST<br />
+        01326 572063<br />
+        <ExternalLink href="mailto:enquiries@helston-tc.gov.uk"
+          >enquiries@helston-tc.gov.uk</ExternalLink
+        >
+      </p>
+    </div>
+    <Image src={stallsImg} alt="" class="rounded" />
+  </div>
 </Layout>
