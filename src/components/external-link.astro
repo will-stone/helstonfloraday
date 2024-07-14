@@ -1,5 +1,7 @@
 ---
-const { href } = Astro.props
+import Link from './link.astro'
+
+const props = Astro.props
 ---
 
-<a href={href} class="text-primary underline" target="_blank"><slot /></a>
+<Link {...props} target="_blank"><slot /></Link>

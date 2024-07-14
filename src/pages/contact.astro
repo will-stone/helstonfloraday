@@ -4,7 +4,10 @@ import Layout from '../components/layout.astro'
 import middayDanceImg from '../images/gallery/photo_2021-03-17-13.07.32.jpeg'
 import morningEveningDanceImg from '../images/gallery/photo_2021-03-17-13.07.52.jpeg'
 import stallsImg from '../images/website/stalls.jpg'
+import allOtherImg from '../images/gallery/photo_2021-03-17-13.08.14.jpeg'
+import separatorImg from '../images/gallery/photo_2021-03-17-09.09.36.jpeg'
 import ExternalLink from '../components/external-link.astro'
+import Link from '../components/link.astro'
 ---
 
 <Layout title="Contact">
@@ -80,5 +83,141 @@ import ExternalLink from '../components/external-link.astro'
       </p>
     </div>
     <Image src={stallsImg} alt="" class="rounded" />
+  </div>
+
+  <h2 class="mt-16 font-display text-3xl">All Other Enquiries</h2>
+  <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="space-y-4">
+      <p class="text-justify leading-relaxed">
+        If you require further information about the days' events and the
+        history of the festival, the informative booklet is <Link
+          href="/official-guide"
+        >
+          available from the Flora Day Association Secretary
+        </Link>.
+      </p>
+      <p>
+        Hon Secretary, Mr N. B. Wills<br />
+        Cordelia,<br />
+        117 Meneage Street,<br />
+        Helston,<br />
+        TR13 8RL,<br />
+        <ExternalLink href="mailto:helstonfloraday@yahoo.co.uk"
+          >helstonfloraday@yahoo.co.uk</ExternalLink
+        >
+      </p>
+      <hr />
+      <p>
+        For information about the Early Morning and Evening Dances please
+        contact:
+      </p>
+      <p>
+        The Secretary, Mrs Kate Williams,<br />
+        Naegil,<br />
+        Troubridge Road,<br />
+        Helston,<br />
+        TR13 8DQ<br />
+        <ExternalLink href="mailto:katewilliams70@rocketmail.com"
+          >katewilliams70@rocketmail.com</ExternalLink
+        >
+      </p>
+    </div>
+    <Image src={allOtherImg} alt="" class="rounded" />
+  </div>
+
+  <Image class="mt-16" alt="" src={separatorImg} />
+
+  <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div>
+      <h2 class="font-display text-3xl">Stewards of the Ancient Furry Dance</h2>
+      <ul class="mt-4 list-inside list-disc">
+        <li>Nigel Pascoe — <em>Chairman of Stewards</em></li>
+        <li>Nick Wills — <em>Hon Secretary</em></li>
+        <li>Mike Atkins — <em>Hon. Treasurer</em></li>
+        <li>Martin Wallis — <em>Deputy Chairman</em></li>
+        <li>Alan Bradley — <em>Association Chairman</em></li>
+      </ul>
+      <ul class="mt-4 list-inside list-disc">
+        <li>Sharon Ashton</li>
+        <li>David Bowden</li>
+        <li>David Brown</li>
+        <li>Alan Christophers</li>
+        <li>Vince Davis</li>
+        <li>Barry Drew</li>
+        <li>Nic Drew</li>
+        <li>Peter Ferris</li>
+        <li>Ian Fitter</li>
+        <li>Derek Goodhall</li>
+        <li>Richard Harvey</li>
+        <li>Chris Heaps</li>
+        <li>John Hocking</li>
+        <li>Kevin James</li>
+        <li>Roger James</li>
+        <li>John Liddicoat</li>
+        <li>Tom Mitchell</li>
+        <li>Chris Oliver</li>
+        <li>Shane Orchard</li>
+        <li>Graham Pascoe</li>
+        <li>Steve Pascoe</li>
+        <li>John Penaluna</li>
+        <li>Matt Penaluna</li>
+        <li>Carlton Real</li>
+        <li>Graham Rogers</li>
+        <li>Mike Ruberry</li>
+        <li>Joe Thomas</li>
+        <li>Martin Wallis</li>
+        <li>Jay Willey</li>
+        <li>Mike Williams</li>
+        <li>Kate Williams</li>
+        <li>Kevin Williams</li>
+        <li>John White</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-display text-3xl">
+        Early Morning & Evening Dance Stewards
+      </h2>
+      <ul class="mt-4 list-inside list-disc">
+        <li>Nigel Pascoe — Chairman</li>
+        <li>Kate Williams — Secretary</li>
+        <li>Mike Atkins — Treasurer</li>
+        <li>Martin Wallis — Deputy Chairman</li>
+      </ul>
+      <ul class="mt-4 list-inside list-disc">
+        <li>David Bowden</li>
+        <li>Rachel Eaton</li>
+        <li>Clenton Endean</li>
+        <li>Kristine Furneaux</li>
+        <li>Hayley Goodchild</li>
+        <li>Scott Greet</li>
+        <li>Shaun Howells</li>
+        <li>Polly John</li>
+        <li>Jamie King</li>
+        <li>Phillip Martin</li>
+        <li>David Osborne</li>
+        <li>Scott Parker</li>
+        <li>Lisa Robson</li>
+        <li>Shelley Skewes</li>
+        <li>Sarah Sneddon</li>
+        <li>Phillip Thomas</li>
+        <li>Verena Watkiss</li>
+        <li>Kevin Williams</li>
+      </ul>
+      <h2 class="mt-8 font-display text-3xl">
+        Flora Day Association Life Members
+      </h2>
+      <p class="mt-4 text-justify leading-relaxed">
+        Life membership status is an honorary position decided at the discretion
+        of the Flora Day Stewards in light of the contribution each member has
+        dedicated to Flora Day.
+      </p>
+      <ul class="mt-4 list-inside list-disc">
+        <li>Hugh Bassett</li>
+        <li>Baden Christophers</li>
+        <li>Bryan Cuddy</li>
+        <li>John Head</li>
+        <li>Ronnie Williams</li>
+      </ul>
+    </div>
   </div>
 </Layout>
