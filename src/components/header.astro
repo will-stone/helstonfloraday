@@ -30,7 +30,7 @@
                 href={import.meta.env.BASE_URL + href}
                 class="block p-3"
                 class:list={
-                  Astro.url.pathname === href
+                  Astro.url.pathname === import.meta.env.BASE_URL + href
                     ? 'text-secondary'
                     : 'md:opacity-70'
                 }
