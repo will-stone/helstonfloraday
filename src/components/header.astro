@@ -2,7 +2,10 @@
   class="sticky top-0 z-30 border-b border-black/20 bg-primary py-1 shadow-md"
 >
   <div class="container flex items-center justify-between">
-    <a href="/" class="font-display text-2xl text-secondary">
+    <a
+      href={import.meta.env.BASE_URL + '/'}
+      class="font-display text-2xl text-secondary"
+    >
       Helston Flora Day
     </a>
     <nav class="relative">
@@ -24,7 +27,7 @@
           ].map(({ href, title }) => (
             <li>
               <a
-                href={href}
+                href={import.meta.env.BASE_URL + href}
                 class="block p-3"
                 class:list={
                   Astro.url.pathname === href
