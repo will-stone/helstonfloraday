@@ -51,7 +51,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             >
               Close
             </a>
-            <div class="absolute bottom-4 right-4 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <div class="absolute bottom-4 right-4 text-xs text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               {path
                 .replace('/src/images/gallery/', '')
                 .replace(/\.[^/.]+$/, '')}
