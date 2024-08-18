@@ -2,6 +2,7 @@
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
 import Layout from '../components/layout.astro'
+import GallerySocialPlug from '../components/gallery-social-plug.astro'
 
 interface Props {
   imagePath: string
@@ -16,7 +17,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <Layout title="Gallery">
-  <div class="sm:columns-2 md:columns-3">
+  <GallerySocialPlug />
+
+  <div class="py-8 sm:columns-2 md:columns-3">
     {
       Object.entries(images).map(([path, image], index) => (
         <div>
@@ -66,4 +69,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       ))
     }
   </div>
+
+  <GallerySocialPlug />
 </Layout>
