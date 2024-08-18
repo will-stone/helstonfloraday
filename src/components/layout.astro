@@ -2,6 +2,8 @@
 import '@fontsource/oswald'
 import '@fontsource/open-sans'
 import Header from '../components/header.astro'
+import FacebookIcon from './facebook-icon.astro'
+import InstagramIcon from './instagram-icon.astro'
 
 const { title: pageTitle } = Astro.props
 
@@ -35,7 +37,27 @@ const title = pageTitle
 
     <footer class="border-t border-neutral-800 bg-primary py-8">
       <div class="container text-center font-bold text-white">
-        Copyright Helston Flora Day Association
+        <div class="flex justify-center gap-16">
+          <a
+            class="flex flex-col items-center gap-2 hover:text-secondary"
+            target="_blank"
+            href="https://www.facebook.com/Helstonfloradayassociation/"
+          >
+            <span class="block size-12"><FacebookIcon /></span>
+            <span>Facebook</span>
+          </a>
+          <a
+            class="flex flex-col items-center gap-2 hover:text-secondary"
+            target="_blank"
+            href="https://www.facebook.com/Helstonfloradayassociation/"
+          >
+            <span class="block size-12"><InstagramIcon /></span>
+            <span>Instagram</span>
+          </a>
+        </div>
+        <div class="mt-8 text-secondary">
+          Copyright Helston Flora Day Association
+        </div>
       </div>
     </footer>
   </body>
