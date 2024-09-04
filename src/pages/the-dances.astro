@@ -11,55 +11,115 @@ import mapImg from '../images/website/FLORA-MAP-new-arrows-New.png'
 
 <Layout title="The Dances">
   <div class="space-y-8">
-    {
-      [
-        {
-          time: '7:00 am',
-          title: 'Early Morning Dance',
-          description:
-            "The First Dance commences from the Guildhall and proceeds up Meneage Street dancing in and out of a number of premises before coming back down and turning right into Wendron Street and Godolphin Road. Turning back at Godolphin House, it proceeds into Penrose Road, Church Street and Cross Street. It moves down Penhellaz Hill into St. John's Road, Castle Green, Monument Road and Coinagehall Street, ending at the Godolphin Club.",
-          img: earlyImg,
-        },
-        {
-          time: '8:30 am',
-          title: 'Hal-an-Tow',
-          description:
-            "Starting at St. John's Bridge, the Hal an Tow performers tell of the history of Helston at the following locations: The Monument, near the cross in Cross Street, at the top of Wendron Street, at the lower end of Horse and Jockey Lane, at the junction of Trengrouse Way and Meneage Street and finally at the Guildhall. The words of the Hal an Tow song are printed in our official booklet.",
-          img: halImg,
-        },
-        {
-          time: '9:50 am',
-          title: "Childrens' Dance",
-          description:
-            "Over 1200 Children from Helston's four schools, all dressed in white with headdresses and ties representing each of the schools, will commence from Wendron Street and process up and then down Meneage Street turning into Church Street and Cross Street. Dancing around the gardens of Penhellis before progressing down Tanyard Lane to Lady Street. Dancing down the pavement of Coinagehall Street, the dance circles the Bowling Green before ending by dancing up the centre of Coinagehall Street.",
-          img: childrensImg,
-        },
-        {
-          time: '12 noon',
-          title: 'Midday Dance',
-          description:
-            'As the Town Clock strikes twelve the Helston born leading set of the Midday Dance leave the Guildhall. The Helston Town Band leads the procession up Meneage Street, dancing in and out of some of the properties before returning on the other side of the street. Turning down into Church Street the dance proceeds to Cross Street and into the Gardens at Lismore where a well earned break is taken. Penhellis, the Old Vicarage Gardens and Leslie House Gardens are on the route to Lady Street. They follow the pavement down Coinagehall Street , dancing around the Bowling Green to emerge under the Monument Arch and the final steps up Coinagehall Street before returning to the Guildhall.',
-          img: middayImg,
-        },
-        {
-          time: '5:00 pm',
-          title: 'Evening Dance',
-          description:
-            'The same dancers who took part in the Early Morning Dance return to the final dance of the day which follows a route similar to the Midday Dance.',
-          img: eveningImg,
-        },
-      ].map(({ time, title, description, img }) => (
+    <div>
+      <h2 class="font-display text-3xl">
+        7:00 am
+        <span class="text-primary">—</span>
+        Early Morning Dance
+      </h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <p class="text-justify leading-relaxed">
+          The First Dance commences from the Guildhall and proceeds up Meneage
+          Street dancing in and out of a number of premises before coming back
+          down and turning right into Wendron Street and Godolphin Road. Turning
+          back at Godolphin House, it proceeds into Penrose Road, Church Street
+          and Cross Street. It moves down Penhellaz Hill into St. John's Road,
+          Castle Green, Monument Road and Coinagehall Street, past the Godolphin
+          Club, ending at the Guildhall.
+        </p>
+        <Image src={earlyImg} alt="" class="rounded" />
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-display text-3xl">
+        8:30 am
+        <span class="text-primary">—</span>
+        Hal-an-Tow
+      </h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
         <div>
-          <h2 class="font-display text-3xl">
-            {time} <span class="text-primary">—</span> {title}
-          </h2>
-          <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <p class="text-justify leading-relaxed">{description}</p>
-            <Image src={img} alt="" class="rounded" />
-          </div>
+          <p class="text-justify leading-relaxed">
+            Starting at St. John's Bridge, the Hal an Tow performers tell of the
+            history of Helston at the following locations:
+          </p>
+          <ol class="my-4 list-outside list-decimal pl-6">
+            <li>The Monument.</li>
+            <li>The cross in Cross Street.</li>
+            <li>The top of Wendron Street.</li>
+            <li>The lower end of Horse and Jockey Lane.</li>
+            <li>The junction of Trengrouse Way and Meneage Street.</li>
+            <li>The Guildhall.</li>
+          </ol>
+          <p class="text-justify leading-relaxed">
+            The words of the Hal an Tow song are printed in our official
+            booklet.
+          </p>
         </div>
-      ))
-    }
+        <Image src={halImg} alt="" class="rounded" />
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-display text-3xl">
+        9:50 am
+        <span class="text-primary">—</span>
+        Childrens' Dance
+      </h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <p class="text-justify leading-relaxed">
+          Over 1200 Children from Helston's four schools, all dressed in white
+          with headdresses and ties representing each of the schools, will
+          commence from Wendron Street and process up and then down Meneage
+          Street turning into Church Street and Cross Street. Dancing around the
+          gardens of Penhellis before progressing down Tanyard Lane to Lady
+          Street. Dancing down the pavement of Coinagehall Street, the dance
+          circles the Bowling Green before ending by dancing up the centre of
+          Coinagehall Street.
+        </p>
+        <Image src={childrensImg} alt="" class="rounded" />
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-display text-3xl">
+        12 noon
+        <span class="text-primary">—</span>
+        Midday Dance
+      </h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <p class="text-justify leading-relaxed">
+          As the Town Clock strikes twelve the Helston born leading set of the
+          Midday Dance leave the Guildhall. The Helston Town Band leads the
+          procession up Meneage Street, dancing in and out of some of the
+          properties before returning on the other side of the street. Turning
+          down into Church Street the dance proceeds to Cross Street and into
+          the Gardens at Lismore where a well earned break is taken. Penhellis,
+          the Old Vicarage Gardens and Leslie House Gardens are on the route to
+          Lady Street. They follow the pavement down Coinagehall Street ,
+          dancing around the Bowling Green to emerge under the Monument Arch and
+          the final steps up Coinagehall Street before returning to the
+          Guildhall.
+        </p>
+        <Image src={middayImg} alt="" class="rounded" />
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-display text-3xl">
+        5:00 pm
+        <span class="text-primary">—</span>
+        Evening Dance
+      </h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <p class="text-justify leading-relaxed">
+          The same dancers who took part in the Early Morning Dance return to
+          the final dance of the day which follows a route similar to the Midday
+          Dance.
+        </p>
+        <Image src={eveningImg} alt="" class="rounded" />
+      </div>
+    </div>
   </div>
 
   <Image alt="" src={mapImg} class="mt-16" />
