@@ -4,6 +4,8 @@ import '@fontsource/open-sans'
 import Header from '../components/header.astro'
 import FacebookIcon from './facebook-icon.astro'
 import InstagramIcon from './instagram-icon.astro'
+import floradayAssociationLogo from '../images/website/helston-floraday-association.jpg'
+import { Image } from 'astro:assets'
 
 const { title: pageTitle } = Astro.props
 
@@ -40,7 +42,7 @@ const title = pageTitle
       </div>
     </main>
 
-    <footer class="border-t border-neutral-800 bg-primary py-8">
+    <footer class="border-t border-neutral-800 bg-primary py-12">
       <div class="container text-center font-bold text-white">
         <div class="flex justify-center gap-16">
           <a
@@ -62,6 +64,13 @@ const title = pageTitle
         </div>
         <div class="mt-8 text-secondary">
           Copyright Helston Flora Day Association
+        </div>
+        <div class="mt-8 flex justify-center">
+          <Image
+            src={floradayAssociationLogo}
+            alt=""
+            class="max-w-60 rounded-3xl shadow-xl"
+          />
         </div>
       </div>
     </footer>
