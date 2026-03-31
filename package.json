@@ -16,7 +16,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/open-sans": "^5.0.28",
     "@fontsource/oswald": "^5.0.20",
-    "astro": "^4.11.3",
+    "astro": "^4.16.6",
     "nanoid": "^5.0.7",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
