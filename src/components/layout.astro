@@ -12,44 +12,25 @@ import { Image } from 'astro:assets'
 
 const { title: pageTitle } = Astro.props
 
-const title = pageTitle
-  ? pageTitle + ' | Helston Flora Day'
-  : 'Helston Flora Day | The Official Site'
+const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Day | The Official Site'
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href={oswaldWoff2}
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href={openSansWoff2}
-      crossorigin="anonymous"
-    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" as="font" type="font/woff2" href={oswaldWoff2} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={openSansWoff2} crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <script
-      defer
-      src="https://celadon-seriema.pikapod.net/script.js"
-      data-website-id="605cf37f-33df-42a8-9fd9-351295db051b"
-      data-domains="helstonfloraday.org.uk"></script>
+    <script defer src="https://celadon-seriema.pikapod.net/script.js" data-website-id="605cf37f-33df-42a8-9fd9-351295db051b" data-domains="helstonfloraday.org.uk" is:inline></script>
   </head>
   <body class="bg-primary text-lg font-medium text-neutral-700">
     <Header />
     <main class="bg-white bg-[url('/bg.png')]">
       <slot name="title">
-        <h1
-          class="bg-primary font-display text-secondary border-b border-neutral-800 py-14 text-center text-6xl"
-        >
+        <h1 class="bg-primary font-display text-secondary border-b border-neutral-800 py-14 text-center text-6xl">
           {pageTitle}
         </h1>
       </slot>
@@ -62,32 +43,18 @@ const title = pageTitle
     <footer class="bg-primary border-t border-neutral-800 py-12">
       <div class="container text-center font-bold text-white">
         <div class="flex justify-center gap-16">
-          <a
-            class="hover:text-secondary flex flex-col items-center gap-2"
-            target="_blank"
-            href="https://www.facebook.com/Helstonfloradayassociation/"
-          >
+          <a class="hover:text-secondary flex flex-col items-center gap-2" target="_blank" href="https://www.facebook.com/Helstonfloradayassociation/">
             <span class="block size-12"><FacebookIcon /></span>
             <span>Facebook</span>
           </a>
-          <a
-            class="hover:text-secondary flex flex-col items-center gap-2"
-            target="_blank"
-            href="https://www.instagram.com/HELSTONFLORADAY/"
-          >
+          <a class="hover:text-secondary flex flex-col items-center gap-2" target="_blank" href="https://www.instagram.com/HELSTONFLORADAY/">
             <span class="block size-12"><InstagramIcon /></span>
             <span>Instagram</span>
           </a>
         </div>
-        <div class="text-secondary mt-8">
-          Copyright Helston Flora Day Association
-        </div>
+        <div class="text-secondary mt-8">Copyright Helston Flora Day Association</div>
         <div class="mt-8 flex justify-center">
-          <Image
-            src={floradayAssociationLogo}
-            alt=""
-            class="max-w-60 rounded-3xl shadow-xl"
-          />
+          <Image src={floradayAssociationLogo} alt="" class="max-w-60 rounded-3xl shadow-xl" />
         </div>
       </div>
     </footer>
