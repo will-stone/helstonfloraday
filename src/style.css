@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@theme {
+  --font-display: 'Oswald', 'Helvetica', 'Arial', sans-serif;
+  --font-sans:
+    'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --color-primary: #2e7c71;
+  --color-secondary: #ffe9a8;
+  --color-tertiary: #235d55;
+  --color-quaternary: #2a515c;
+}

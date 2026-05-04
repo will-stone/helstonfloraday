@@ -1,6 +1,7 @@
 ---
 import '@fontsource/oswald'
 import '@fontsource/open-sans'
+import '../style.css'
 import openSansWoff2 from '@fontsource/open-sans/files/open-sans-latin-400-normal.woff2'
 import oswaldWoff2 from '@fontsource/oswald/files/oswald-latin-400-normal.woff2'
 import Header from '../components/header.astro'
@@ -47,7 +48,7 @@ const title = pageTitle
     <main class="bg-white bg-[url('/bg.png')]">
       <slot name="title">
         <h1
-          class="border-b border-neutral-800 bg-primary py-14 text-center font-display text-6xl text-secondary"
+          class="bg-primary font-display text-secondary border-b border-neutral-800 py-14 text-center text-6xl"
         >
           {pageTitle}
         </h1>
@@ -58,11 +59,11 @@ const title = pageTitle
       </div>
     </main>
 
-    <footer class="border-t border-neutral-800 bg-primary py-12">
+    <footer class="bg-primary border-t border-neutral-800 py-12">
       <div class="container text-center font-bold text-white">
         <div class="flex justify-center gap-16">
           <a
-            class="flex flex-col items-center gap-2 hover:text-secondary"
+            class="hover:text-secondary flex flex-col items-center gap-2"
             target="_blank"
             href="https://www.facebook.com/Helstonfloradayassociation/"
           >
@@ -70,7 +71,7 @@ const title = pageTitle
             <span>Facebook</span>
           </a>
           <a
-            class="flex flex-col items-center gap-2 hover:text-secondary"
+            class="hover:text-secondary flex flex-col items-center gap-2"
             target="_blank"
             href="https://www.instagram.com/HELSTONFLORADAY/"
           >
@@ -78,7 +79,7 @@ const title = pageTitle
             <span>Instagram</span>
           </a>
         </div>
-        <div class="mt-8 text-secondary">
+        <div class="text-secondary mt-8">
           Copyright Helston Flora Day Association
         </div>
         <div class="mt-8 flex justify-center">

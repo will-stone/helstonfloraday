@@ -8,17 +8,14 @@ import Layout from '../components/layout.astro'
 <Layout title="Helston Flora Day | The Official Site">
   <div class="relative md:py-14" slot="title">
     <div class="absolute inset-0 flex">
-      <div class="w-2/3 bg-primary"></div>
-      <div class="w-1/3 bg-tertiary"></div>
+      <div class="bg-primary w-2/3"></div>
+      <div class="bg-tertiary w-1/3"></div>
     </div>
     <div class="relative md:container lg:flex">
       <div class="h-80 lg:h-auto lg:w-96">
-        <Image src={dance2} alt="" class="h-full object-cover md:rounded" />
+        <Image src={dance2} alt="" class="h-full object-cover md:rounded-sm" />
       </div>
-      <h1
-        data-css-title
-        class="ml-auto px-16 pb-20 pt-16 text-right font-display text-5xl uppercase leading-tight tracking-wider text-secondary md:text-7xl lg:pb-64 lg:pt-24"
-      >
+      <h1 data-css-title class="font-display text-secondary ml-auto px-16 pt-16 pb-20 text-right text-5xl leading-tight tracking-wider uppercase md:text-7xl md:leading-none lg:pt-24 lg:pb-64">
         Helston<br />Flora Day
       </h1>
     </div>
@@ -26,46 +23,22 @@ import Layout from '../components/layout.astro'
 
   <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
     <div>
-      <p class="font-display text-3xl uppercase leading-normal">
-        Helston, the Cornish market town, where for hundreds of years, the
-        townsfolk have celebrated and enjoyed the wonderful tradition that is
-        Flora Day.
-      </p>
+      <p class="font-display text-3xl leading-normal uppercase">Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day.</p>
     </div>
 
-    <div class="lg:relative lg:z-10 lg:-mt-40 lg:rounded lg:bg-white lg:p-8">
-      <Image src={hal2} alt="" class="rounded" />
+    <div class="lg:relative lg:z-10 lg:-mt-40 lg:rounded-sm lg:bg-white lg:p-8">
+      <Image src={hal2} alt="" class="rounded-sm" />
     </div>
 
-    <p class="leading-relaxed">
-      This ancient festival is usually held on 8th May. A spring festival to
-      celebrate the end of winter and mark the arrival of the new vitality and
-      fertility with the trees and flowers bursting into life. The houses and
-      shops of the town are decorated with greenery and floral arrangements to
-      express the spirit of renewal.
-    </p>
+    <p class="leading-relaxed">This ancient festival is usually held on 8th May. A spring festival to celebrate the end of winter and mark the arrival of the new vitality and fertility with the trees and flowers bursting into life. The houses and shops of the town are decorated with greenery and floral arrangements to express the spirit of renewal.</p>
 
-    <p class="leading-relaxed">
-      When the big bass drum strikes the first beat of the dance at seven in the
-      morning, the spirit of the day is stirred and the celebrations commence.
-      Couples dance through the streets, entering selected houses and shops to
-      drive out the darkness of winter and bring in the light of spring.
-    </p>
+    <p class="leading-relaxed">When the big bass drum strikes the first beat of the dance at seven in the morning, the spirit of the day is stirred and the celebrations commence. Couples dance through the streets, entering selected houses and shops to drive out the darkness of winter and bring in the light of spring.</p>
 
     <div>
-      <a
-        href="/official-guide"
-        class="rounded-2xl bg-primary px-6 py-4 text-secondary shadow-lg"
-        >Purchase the Official Guidebook</a
-      >
+      <a href="/official-guide" class="bg-primary text-secondary rounded-2xl px-6 py-4 shadow-lg">Purchase the Official Guidebook</a>
     </div>
 
-    <p class="leading-relaxed">
-      The colourful pageant, known as Hal an Tow, tells the history of Helston
-      with the participating characters singing about the challenge of the
-      Spanish Armada, the English patron saint, St. George and the fight between
-      St. Michael and the devil.
-    </p>
+    <p class="leading-relaxed">The colourful pageant, known as Hal an Tow, tells the history of Helston with the participating characters singing about the challenge of the Spanish Armada, the English patron saint, St. George and the fight between St. Michael and the devil.</p>
   </div>
 </Layout>
 
