@@ -12,7 +12,9 @@ import { Image } from 'astro:assets'
 
 const { title: pageTitle } = Astro.props
 
-const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Day | The Official Site'
+const title = pageTitle
+  ? pageTitle + ' | Helston Flora Day'
+  : 'Helston Flora Day | The Official Site'
 ---
 
 <html lang="en">
@@ -20,7 +22,10 @@ const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Da
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <meta name="description" content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day." />
+    <meta
+      name="description"
+      content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day."
+    />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -38,7 +43,10 @@ const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Da
     <meta property="og:url" content="https://helstonfloraday.org.uk/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Helston Flora Day | The Official Site" />
-    <meta property="og:description" content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day." />
+    <meta
+      property="og:description"
+      content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day."
+    />
     <meta property="og:image" content={new URL('dance2.jpg', Astro.site)} />
 
     <!-- Twitter Meta Tags -->
@@ -46,16 +54,19 @@ const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Da
     <meta property="twitter:domain" content="helstonfloraday.org.uk" />
     <meta property="twitter:url" content="https://helstonfloraday.org.uk/" />
     <meta name="twitter:title" content="Helston Flora Day | The Official Site" />
-    <meta name="twitter:description" content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day." />
+    <meta
+      name="twitter:description"
+      content="Helston, the Cornish market town, where for hundreds of years, the townsfolk have celebrated and enjoyed the wonderful tradition that is Flora Day."
+    />
     <meta name="twitter:image" content={new URL('dance2.jpg', Astro.site)} />
-
-    <script defer src="https://celadon-seriema.pikapod.net/script.js" data-website-id="605cf37f-33df-42a8-9fd9-351295db051b" data-domains="helstonfloraday.org.uk" is:inline></script>
   </head>
   <body class="bg-primary text-lg font-medium text-neutral-700">
     <Header />
     <main class="bg-white bg-[url('/bg.png')]">
       <slot name="title">
-        <h1 class="bg-primary font-display text-secondary border-b border-neutral-800 py-14 text-center text-6xl">
+        <h1
+          class="bg-primary font-display text-secondary border-b border-neutral-800 py-14 text-center text-6xl"
+        >
           {pageTitle}
         </h1>
       </slot>
@@ -68,11 +79,19 @@ const title = pageTitle ? pageTitle + ' | Helston Flora Day' : 'Helston Flora Da
     <footer class="bg-primary border-t border-neutral-800 py-12">
       <div class="container text-center font-bold text-white">
         <div class="flex justify-center gap-16">
-          <a class="hover:text-secondary flex flex-col items-center gap-2" target="_blank" href="https://www.facebook.com/Helstonfloradayassociation/">
+          <a
+            class="hover:text-secondary flex flex-col items-center gap-2"
+            target="_blank"
+            href="https://www.facebook.com/Helstonfloradayassociation/"
+          >
             <span class="block size-12"><FacebookIcon /></span>
             <span>Facebook</span>
           </a>
-          <a class="hover:text-secondary flex flex-col items-center gap-2" target="_blank" href="https://www.instagram.com/HELSTONFLORADAY/">
+          <a
+            class="hover:text-secondary flex flex-col items-center gap-2"
+            target="_blank"
+            href="https://www.instagram.com/HELSTONFLORADAY/"
+          >
             <span class="block size-12"><InstagramIcon /></span>
             <span>Instagram</span>
           </a>
