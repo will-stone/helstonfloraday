@@ -8,9 +8,12 @@
     "build": "astro check && astro build",
     "dev": "astro dev",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "deploy": "xmit helstonfloraday.xmit.dev@839"
+
   },
   "dependencies": {
+    "@xmit.co/xmit": "0.5.2-0",
     "@astrojs/check": "^0.9.9",
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/svelte": "^8.1.0",
@@ -26,5 +29,21 @@
     "svelte": "^5.55.5",
     "tailwindcss": "^4.2.4",
     "typescript": "^5.5.3"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "^12.2.2"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "^26.13.0"
+    }
+  },
+  "allowScripts": {
+    "@xmit.co/xmit": true,
+    "esbuild": true,
+    "fsevents": true,
+    "sharp": true
   }
 }
